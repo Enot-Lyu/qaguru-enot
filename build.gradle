@@ -1,0 +1,15 @@
+plugins {                         //библиотека java
+    id 'java-library'
+}
+
+repositories {         //конкретный сайт под капотом зашит
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:6.12.4"
+           )
+}
+
+
