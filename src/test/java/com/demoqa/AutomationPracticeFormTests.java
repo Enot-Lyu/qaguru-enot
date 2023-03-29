@@ -25,21 +25,22 @@ public class AutomationPracticeFormTests extends TestBase {    //extends TestBas
 
 
 
-        //Выбрать дату рождения
-        $(".react-datepicker__header__dropdown react-datepicker__header__dropdown--select").click();
-       // <div class="react-datepicker__month-dropdown-container react-datepicker__month-dropdown-container--select"><select class="react-datepicker__month-select"><option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option><option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option><option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option></select></div>
-        $("div .react-datepicker__header__dropdown react-datepicker__header__dropdown--select").$(".react-datepicker__month-select").$("[value=1]").click();
-        $(byText("February")).click();             //TODO выбор даты рождения
-        //$(".react-datepicker__month-dropdown-container react-datepicker__month-dropdown-container--select").$("[value=1]").click();
-        //$("[value=1]").getSelectedOptionValue();
+        //Выбрать дату рождения (как сделать правильно по селекторам)
+        $(".react-datepicker__month-container").$(byText("February")).click();
+        $(".react-datepicker__month-container").$(byText("1996")).click();
+        $(".react-datepicker__month-container").$(byText("10")).click();
 
-
-
+        //Заполнение субъекта
+        //$(byText("subjectsContainer")).setValue("subjectsContainer");
+       // $(".col-md-9 col-sm-12")
+        //$(".col-md-9 col-sm-12").setValue("subjectsContainer");
 
         $("[for=hobbies-checkbox-1]").click();               //TODO Клик на чек-бокс выбор хобби
         $("[for=hobbies-checkbox-2]").click();               //TODO Клик на чек-бокс выбор хобби
         $("[for=hobbies-checkbox-3]").click();               //TODO Клик на чек-бокс выбор хобби
-        $("#uploadPicture").click();                //TODO Клик на кнопку "Выберте файл"
+
+        //Загрузка изображения
+        $("#uploadPicture").click();                         //TODO Клик на кнопку "Выберте файл"
 
         $("#submit").click();
 
