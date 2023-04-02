@@ -11,6 +11,6 @@ public class TestBase {
         Configuration.browser = "chrome";
         Configuration.timeout = 8000;
         Configuration.browserSize = "1920x1080";
-        //Configuration.holdBrowserOpen = true; //браузер не закрывать
+        Configuration.holdBrowserOpen = true; //браузер не закрывать
     }
 }

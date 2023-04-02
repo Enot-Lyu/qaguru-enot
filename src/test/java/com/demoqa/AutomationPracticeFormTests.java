@@ -1,7 +1,6 @@
 package com.demoqa;
 
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import java.io.File;
@@ -12,16 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AutomationPracticeFormTests extends TestBase {    //extends TestBase прописаны конфигурации
 
-    @BeforeAll
-    static void beforeAll(){
-        System.out.println("----------------#### Начало теста AutomationPracticeFormTests ####--------------------");
-    }
-    @AfterAll
-    static void afterAll(){
-        System.out.println("----------------#### Конец теста AutomationPracticeFormTests ####--------------------");
-    }
-    @Test
-        //это аннотация, можно поставить над классом, методом (функуии) чтобы JUnit знал что запускать
+    @Test        //это аннотация, можно поставить над классом, методом (функуии) чтобы JUnit знал что запускать
     void mySuccessFullFillFormTest(){
 
         open("/automation-practice-form");
